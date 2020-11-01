@@ -1,17 +1,53 @@
+body {
+    background-image: url("coding.jpeg");
+    background-repeat: no-repeat;
+    background-size: 1600px 900px;
+  }
+button {
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 100px;
+    padding: 25px;
+    background-color: chartreuse;
+    font-size: larger;
+    font-weight: bold;
+   
+}
+
 
 .grid {
+
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
-    background-color: blue;
+    padding-left: 400px;
+    padding-top: 80px;
+    width: 456px;
+    height: 456px;
+
 }
 
 .grid div {
     width: 100px;
     height: 100px;
-    background-color: yellow;
+    margin: 7px;
+    background-color: turquoise;
     font-size: 60px;
     text-align: center;
     font-weight: bold;
+}
+
+
+
+.score-container {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background-color: violet;
+    color: white;
+    margin-left: 45%;
+}
+
+.score-container #score {
+    font-size: larger;
+
 }
