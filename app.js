@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded',() => {
      function checkForWin() {
          for(let i=0; i < squares.length; i++){
         if(squares[i].innerHTML == 2048) {
-            resultDisplay.innerHTML = 'You Win !!!'
+            resultDisplay.innerHTML = alert('You Win !!!')
             document.removeEventListener('keyup',control)
         }
     }
@@ -243,11 +243,40 @@ document.addEventListener('DOMContentLoaded',() => {
               }
           }
           if(zeros === 0) {
-            resultDisplay.innerHTML = 'You Lose'
+            resultDisplay.innerHTML = alert('You Lose')
             document.removeEventListener('keyup', control)
         }
          
       }
+      function clear() {
+        clearInterval(myTimer)
+      }
+
+
+      function addColor() {
+          for (let i=0; i < squares.length; i++){
+            if (squares[i].innerHTML == 0) {squares[i].style.backgroundColor = ''}
+            else if (squares[i].innerHTML == 2) {squares[i].style.backgroundColor = '#FF0000'}
+            else if (squares[i].innerHTML == 4) {squares[i].style.backgroundColor = '#F1C40F'}
+            else if (squares[i].innerHTML == 8) {squares[i].style.backgroundColor = '#8E44AD'}
+            else if (squares[i].innerHTML == 16) {squares[i].style.backgroundColor = '#1C2833'}
+            else if (squares[i].innerHTML == 32) {squares[i].style.backgroundColor = '#148F77'}
+            else if (squares[i].innerHTML == 64) {squares[i].style.backgroundColor = '#ECF0F1'}
+            else if (squares[i].innerHTML == 128) {squares[i].style.backgroundColor = '#D35400'}
+            else if (squares[i].innerHTML == 256) {squares[i].style.backgroundColor = '#00FF00'}
+            else if (squares[i].innerHTML == 512) {squares[i].style.backgroundColor = '#0000FF'}
+            else if (squares[i].innerHTML == 1024) {squares[i].style.backgroundColor = '#808000'}
+            else if (squares[i].innerHTML == 2048) {squares[i].style.backgroundColor = '#000000'}
+
+ 
+          }
+      }
+      addColor()
+      
+      var myTimer = setInterval(addColor, 50)
+
+      
+      
 
 
 
